@@ -1,0 +1,33 @@
+{{template "../tpl/admin/header.tpl" .}}
+
+<div class="container">
+<h1>留言列表</h1>
+
+<table class="table table-striped" >
+  <thead>
+    <tr>
+    <th>ID</th>
+    <th>留言内容</th>
+    <th>留言时间</th>
+    <th>操作</th>
+    </tr>
+  </thead>
+<!-- href="/admin/topic?action=del&id={{.Id}}" -->
+  <tbody>
+  
+     {{range .AllLiuyan}}
+  <tr>
+   <td >{{.Id}}</td>
+   <td>{{.AllContent}}</td>
+   <td>{{.Created}} </td>
+   <td><a href="/admin/liuyan?action=del&id={{.Id}}">删除</a></td>
+   </tr>
+   {{end}}
+  </tbody>
+    
+</table>
+</div>
+
+</body>
+
+</html>

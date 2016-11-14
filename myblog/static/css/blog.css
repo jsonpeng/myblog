@@ -1,0 +1,479 @@
+/*响应式页面设置 
+/*宽度高于1200px的分辨率下设备显示效果 */
+@media (min-width: 1200px) {
+.container {
+    width: 970px;
+}
+.mainCol {
+    margin: 0 auto;
+    min-height: 800px;
+    width: 1200px;
+}
+.liuyanban{
+      margin: 0 auto;
+    min-height: 200px;
+    width: 1000px;
+}
+/* 手记的响应式*/
+.article-left {
+    margin-bottom: 30px;
+    margin-top: 40px;
+    width: 840px;
+}
+.myiframe{
+   
+    width:970px;
+    height: 800px;
+}
+}
+/*宽度高于800px的分辨率下设备显示效果 */
+@media (min-width: 800px) {
+.liuyanban{
+      margin: 0 auto;
+    min-height: 800px;
+    width: 980px;
+}
+/* 手记的响应式*/
+.article-left {
+    margin-bottom: 30px;
+    margin-top: 40px;
+    width: 840px;
+}
+
+}
+@media (min-width: 450px) {
+	
+}
+/*宽度低于800px的分辨率下设备显示效果 */
+@media (max-width: 800px) {
+.container {
+    width: 600px;
+}
+.mainCol {
+    margin: 0 auto;
+    min-height: 800px;
+    width: 600px;
+}
+.liuyanban {
+    margin: 0 auto;
+    min-height: 800px;
+    width: 520px;
+}
+/* 手记的响应式*/
+.article-left {
+    margin-bottom: 30px;
+    margin-top: 40px;
+    width: 600px;
+}
+}
+@media (max-width: 450px) {
+.container {
+    width: 400px;
+}
+.mainCol {
+    margin: 0 auto;
+    min-height: 800px;
+    width: 300px;
+}
+.liuyanban {
+    margin: 0 auto;
+    min-height: 800px;
+    width: 350px;
+}
+/* 手记的响应式*/
+.article-left {
+    margin-bottom: 30px;
+    margin-top: 40px;
+    width: 400px;
+}
+}
+/*结束响应式*/
+body {
+    color: #555555;
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+
+.blog-masthead {
+    background-color: black;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1) inset;
+}
+.blog-nav-item {
+    color: #cdddeb;
+    display: inline-block;
+    font-weight: 500;
+    padding: 10px;
+    position: relative;
+}
+.blog-nav-item:hover, .blog-nav-item:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+.blog-nav .active {
+    color: #ffffff;
+}
+.blog-nav .active::after {
+    border-bottom: 5px solid;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    bottom: 0;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    vertical-align: middle;
+    width: 0;
+}
+.blog-header {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.blog-title {
+    font-size: 60px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+.blog-description {
+    color: #999999;
+    font-size: 20px;
+}
+.blog-main {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.sidebar-module {
+    margin: 0 -15px 15px;
+    padding: 15px;
+}
+.sidebar-module-inset {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 15px;
+}
+.sidebar-module-inset p:last-child, .sidebar-module-inset ul:last-child, .sidebar-module-inset ol:last-child {
+    margin-bottom: 0;
+}
+.pager {
+    margin-bottom: 60px;
+    text-align: left;
+}
+.pager > li > a {
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    width: 140px;
+}
+.blog-post {
+    margin-bottom: 60px;
+}
+.blog-post-title {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.blog-post-meta {
+    color: #999999;
+    margin-bottom: 20px;
+}
+.blog-footer {
+    background-color: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+    color: #999999;
+    padding: 40px 0;
+    text-align: center;
+}
+.blog-footer p:last-child {
+    margin-bottom: 0;
+}
+/* 开始 知识库列表  */
+
+ul, ol {
+    list-style: outside none none;
+}
+body {
+    background-color: #edf1f5;
+    font-family: Microsoft Yahei;
+}
+.list01 {
+    margin-bottom: 15px;
+    margin-left: -30px;
+    margin-top: 5px;
+}
+
+.list01 li {
+    background-color: #fff;
+    box-shadow: 0 1px 1px #ccc;
+    float: left;
+    height: 275px;
+    margin: 15px 0 15px 30px;
+    width: 360px;
+}
+.list01 li .spantop {
+    height: 90px;
+    position: relative;
+    width: 360px;
+}
+.list01 li .spantop span {
+    background-color: #fff;
+    border-radius: 80px;
+    bottom: -24px;
+    box-shadow: 0 1px 3px #ccc;
+    display: block;
+    height: 80px;
+    left: 50%;
+    margin-left: -40px;
+    position: absolute;
+    width: 80px;
+}
+.list01 li .spantop span a {
+    display: block;
+    height: 80px;
+    width: 80px;
+}
+.list01 li .spantop span img {
+    border-radius: 80px;
+}
+.list01 li p {
+    margin-top: 30px;
+    padding: 15px 30px;
+    text-align: center;
+}
+.list01 li p .title {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}
+.list01 li p .content {
+    color: #666;
+    display: block;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-top: 15px;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+.tab_title {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #dedede;
+    height: 58px;
+    line-height: 58px;
+}
+.tab_title a {
+    border-left: 1px solid #dedede;
+    color: #666;
+    display: inline-block;
+    font-size: 18px;
+    height: 58px;
+    padding: 0 30px;
+}
+.tab_title a:nth-child(1) {
+    border: medium none !important;
+}
+.tab_title .cur {
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+}
+.tab_title .cur:nth-child(2) {
+    border-right: 1px solid #dedede;
+}
+.list02 {
+    padding: 15px 30px 30px;
+}
+.list02 li {
+    border-bottom: 1px dashed #e3e3e3;
+    padding: 15px 0;
+}
+.list02 li .ahover {
+    display: block;
+}
+.list02 li .ahover .firstdiv, .list02 li .ahover .twodiv, .list02 li .ahover .inforleft {
+    float: left;
+}
+.list02 li .ahover .inforright {
+    float: right;
+}
+.list02 li .ahover .firstdiv {
+    padding: 0 10px 0 0;
+    width: 140px;
+}
+.list02 li .ahover .firstdiv em {
+    font-size: 14px;
+}
+.list02 li .ahover .firstdiv .fa-cubes {
+    font-size: 14px;
+    margin-right: 10px;
+}
+.list02 li .ahover .twodiv {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 618px;
+}
+.list02 li .ahover .twodiv .title {
+    color: #333;
+    font-size: 16px;
+}
+.list02 li .ahover .twodiv .title:hover {
+    color: #666;
+}
+.list02 li .ahover .twodiv .title .iconfont, .list02 li .ahover .twodiv .title .fa {
+    color: #7d98a4;
+    font-size: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.list02 li .ahover .twodiv .title .icon-media {
+    font-size: 18px;
+}
+.list02 li .ahover .twodiv .title .icon-files {
+    font-size: 18px;
+}
+.list02 li .ahover .twodiv .title .icon-ask {
+    font-size: 22px;
+}
+.list02 li .ahover .twodiv .title .fa-file-text-o {
+    font-size: 21px;
+}
+.list02 li .ahover .twodiv .title .icon-code {
+    font-size: 18px;
+}
+.list02 li .ahover .twodiv .infors {
+    display: block;
+    font-size: 12px;
+    margin-top: 15px;
+}
+.list02 li .ahover .twodiv .infors .inforleft, .list02 li .ahover .twodiv .infors .inforright {
+    color: #999;
+}
+.list02 li .ahover .twodiv .infors .inforleft .r, .list02 li .ahover .twodiv .infors .inforright .r {
+    color: #333;
+}
+.list02 li .ahover .twodiv .infors .inforright a {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 2px 5px;
+}
+.list02 li .ahover .twodiv .infors .inforright a:hover {
+    color: #666;
+}
+
+.divmore {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.divmore a {
+    border: 1px solid green;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 18px;
+    position: relative;
+    width: 173px;
+}
+.divmore a span {
+    display: inline-block;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.divmore a .loadjt {
+    background-color: green;
+    padding: 0;
+    width: 0;
+    z-index: 4;
+}
+.divmore a .loadtext {
+    z-index: 5;
+}
+.divmore a .loadtext em, .divmore a .loadtext .fa {
+    color: green;
+}
+.divmore a .loadtext em {
+    font-size: 16px;
+}
+.divmore a .loadtext .fa {
+    font-size: 14px;
+    margin-left: 5px;
+}
+.divmore a:hover .loadjt {
+    width: 100%;
+}
+.divmore a:hover .loadtext em, .divmore a:hover .loadtext .fa {
+    color: #fff !important;
+}
+.divmore .w {
+    width: 100% !important;
+}
+.divmore .whitext {
+    color: #fff !important;
+}
+.addbkmove {
+    transition: width 0.2s ease-in 0s;
+}
+.addtextmove {
+    transition: color 0.2s ease-in 0s;
+}
+.addbkmove1 {
+    opacity: 0;
+    transition: opacity 0.2s ease-in 0s;
+}
+.addtextmove1 {
+    transition: color 0.2s ease-in 0s;
+}
+/* 结束 知识库列表  */
+
+/*留言板*/
+.liuyan{ 
+    margin-top: 50px; height: 500px; border: 1px solid #EEEEEE; background-color: #EEEEEE; box-shadow: 5px 5px 10px #EEEEEE; padding: 50px; 
+} 
+.information{ m
+    argin-top: 50px; height: 500px; border: 1px solid #EEEEEE; background-color: #EEEEEE; box-shadow: 5px 5px 10px #EEEEEE; padding: 50px; 
+} 
+.navbar-default{ 
+background-color: ghostwhite; 
+} 
+#nav>li>a{ 
+    color: white; 
+}
+#user-fa{ 
+display: inline-block; width: 36px; height: 36px; border: 1px solid #EEEEEE; background-color: #EEEEEE; box-shadow: 1px 1px 5px ; border-radius: 18px; text-align: center; 
+}
+#user-fa>i{
+font-size: 20px; margin-top: 5px; 
+} 
+#user>a{ 
+padding-top: 5px; text-decoration: none; 
+}
+.edit{
+padding: 10px; margin-top: 20px; border-bottom: 1px solid #C7254E; 
+}
+.edit>a{
+color: #000000; margin: 2px;
+}
+.edit>a:hover{
+color:#999999; background-color: #D9EDF7; 
+}
+#message{ 
+width: 100%; height: 100px; 
+}
+.btn-success{
+float: left;
+} 
+.div{ 
+margin-top: 25px; margin-bottom: 25px; width: 100%; background-color: #EEEEEE; border: 1px solid #EBEBEB; border-radius: 25px; box-shadow: 1px 1px 8px #333333; color: #000000; height: auto; padding: 50px; 
+}
+.h4{ 
+width: auto; font-size: 25px; } .mess{ border: 1px solid #E4B9B9; padding: 15px; box-shadow: 2px 2px 15px #EEEEEE; font-family: "微软雅黑"; font-size: medium;
+}
+/* 结束 留言板*/

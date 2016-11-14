@@ -1,0 +1,91 @@
+{{template "../tpl/admin/header.tpl" .}}
+
+<div class="container">
+<h1>文章列表</h1>
+    <a class="btn btn-default" ng-controller="addtopic" ng-click="alert()">添加文章</a>
+<table class="table table-striped" >
+  <thead>
+    <tr>
+    <th>ID</th>
+    <th>文章名称</th>
+    <th>最后更新</th>
+    <th>阅读数</th>
+    <th>操作</th>
+    </tr>
+  </thead>
+<!-- href="/admin/topic?action=del&id={{.Id}}" -->
+<!--href="/admin/topic/modify?tid={{.Id}}"-->
+  <tbody>
+  <input type="hidden" name="action"  />
+     {{range .AllTopics}}
+  <tr>
+   <td name="id" ng-model="formData.id">{{.Id}}</td>
+   <td>{{.Title}}</td>
+   <td>{{.Updated}} </td>
+   <td>{{.Views}}</td>
+   <td><a  href="/admin/topic/modify?tid={{.Id}}">编辑</a>&nbsp;|&nbsp;<a href="/admin/topic?action=del&id={{.Id}}">删除</a></td>
+   </tr>
+   {{end}}
+  </tbody>
+    
+</table>
+</div>
+
+</body>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/aj.js"></script>
+<script src="/static/js/layer-2.4/layer.js"></script>
+<script type="text/javascript">
+  var app=angular.module('myblog',[]) 
+  app.config(['$interpolateProvider', function($interpolateProvider) {
+  $interpolateProvider.startSymbol('[[');
+  $interpolateProvider.endSymbol(']]');
+}]);
+  app.controller('addtopic', function($scope) {
+     $scope.alert=function(){
+      layer.open({
+  type:2,
+  title: '添加文章',
+  shadeClose: true,
+  shade: 0.5,
+  area: ['600px', '75%'],
+  content: 'http://localhost:2020/admin/addtopic' //content的url
+}); 
+}
+});
+    // app.controller('modifytopic', function($scope) {
+    //  $scope.alert=function(){
+     
+//       layer.open({
+//   type:2,
+//   title: '编辑文章',
+//   shadeClose: true,
+//   shade: 0.5,
+//   area: ['600px', '75%'],
+//   content: 'http://localhost:2020/admin/topic/modify?tid=$.param($scope.formData)'
+// }); 
+// }
+// });
+
+  app.controller('deltopic',['$scope','$http',function($scope,$http){
+ $scope.asave= function(){
+         $http({
+             method: 'POST',
+             url:'/admin/deltopic',
+             data:$.param($scope.formData), // pass in data as strings
+             headers: {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}  
+         }).success(function (data) {
+    if(data.error==0x00){
+      layer.msg('删除成功', {
+               offset: 0,
+               shift: 6
+});
+
+    }
+  });
+       };
+  }]);
+  
+
+</script>
+</html>

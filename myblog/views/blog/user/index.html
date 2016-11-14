@@ -1,0 +1,66 @@
+{{template "../tpl/user/header.tpl" .}}
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">我的个人博客</h1>
+        <p class="lead blog-description">博客：记录生活，分享最美的你！</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+{{range .AllTopics}}
+          <div class="blog-post">
+            <h2 class="blog-post-title"><a href="/topic/view/{{.Id}}">{{.Title}}</a></h2>
+            <p class="blog-post-meta">发表于{{.Updated}},总共{{.Views}}次浏览, by <a href="#">PengYun</a></p>
+      <blockquote> <p>{{.Desc}}</p></blockquote>
+       </div>
+       {{end}}
+
+          <nav>
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>推荐文章</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">NO1.March 2014</a></li>
+              <li><a href="#">NO2.February 2014</a></li>
+              <li><a href="#">NO3.January 2014</a></li>
+              <li><a href="#">NO4.December 2013</a></li>
+              <li><a href="#">NO5.November 2013</a></li>
+              <li><a href="#">NO6.October 2013</a></li>
+              <li><a href="#">NO7.September 2013</a></li>
+              <li><a href="#">NO8.August 2013</a></li>
+              <li><a href="#">NO9.July 2013</a></li>
+              <li><a href="#">NO10.June 2013</a></li>
+              <li><a href="#">NO11.May 2013</a></li>
+              <li><a href="#">NO12.April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>联系我</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://github.com/jsonpeng"><span title="follow me on Github" class="octicon octicon-microscope"></span>GitHub</a></li>
+              <li><a href="http://weibo.com/5316207468/profile?rightmod=1&wvr=6&mod=personinfo"><span title="consider me on 新浪微博" class=""></span>新浪微博</a></li>
+              <li><a href="https://zh-cn.facebook.com/people/%E5%BD%AD%E4%BA%91/100013918747901"><span title="chat me on Facebook" class=""></span>Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+        
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+   
+{{template "../tpl/user/footer.tpl" .}}
+   

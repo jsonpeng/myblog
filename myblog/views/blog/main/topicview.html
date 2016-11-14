@@ -1,0 +1,61 @@
+{{if .IsAdmin}}
+{{template "../tpl/admin/header.tpl" .}}
+{{else}}
+{{template "../tpl/user/header.tpl" .}}
+{{end}}
+<div class="container">
+
+ 
+ <div class="page-header">
+ <h1>{{.Topic.Title}}  {{if .IsAdmin}}<a href="/admin/topic/modify?tid={{.Tid}}" class="btn btn-default">修改文章</a>{{end}}</h1>
+
+ <h6 class="text-muted">发表于{{.Topic.Created}}，共{{.Topic.Views}}次浏览,个评论</h6>
+  
+ 
+</div>
+<textarea id="text-input" oninput="this.editor.update()"
+              rows="6" cols="60" style="display:none">
+              {{.Topic.Content}}
+              </textarea>
+<p id="preview"></p>
+</div>
+<hr />
+<div class="container">
+<h3>所有评论</h3>
+<hr />
+{{range .Reply}}
+<h3> <h4>{{.Nickname}}:{{.Content}}</h4>&nbsp;发表于<small>{{.Created}}</small>
+<hr />
+</h3>
+{{end}}
+<hr />
+<h3>说两句...</h3>
+<form action="/addreply" method="post">
+<input type="hidden" name="tid" value="{{.Topic.Id}}">
+<div class="form-group">
+<label>昵称</label>
+<input type="text" name="nickname" class="form-control" placeholder="请输入你的昵称">
+</div>
+
+<div class="form-group">
+<label>评论内容</label>
+<textarea name="content" cols="30" rows="10" class="form-control" placeholder="请输入你的评论内容"></textarea>
+</div>
+<button class="btn btn-default">　提交</button>
+</div>
+</form>
+</div>
+</body>
+ <script src="/static/markdown/markdown.js"></script>
+              <script>
+      function Editor(input, preview) {
+        this.update = function () {
+          preview.innerHTML = markdown.toHTML(input.value);
+        };
+        input.editor = this;
+        this.update();
+      }
+      var $ = function (id) { return document.getElementById(id); };
+      new Editor($("text-input"), $("preview"));
+    </script>
+</html>

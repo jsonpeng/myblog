@@ -1,0 +1,50 @@
+{{template "../tpl/user/header.tpl" .}}
+
+    <div class="container">
+      <div class="blog-header">
+        <h1 class="blog-title">留言板</h1>
+        <p class="lead blog-description">说出你的想法，记录你的生活！</p>
+      </div>
+     </div> 
+
+
+ 
+     <div class="liuyanban"> 
+<!-- 
+ <div id="user"> 
+ <span id="user-fa"><i class="fa fa-user"></i></span> <span href="#" id="usename">Pengyun</span> 
+ </div>  -->
+ <div id="usermessage">
+<!--   <div class="edit"> 
+  <a href=""><i class="fa fa-camera"></i></a> 
+  <a href=""><i class="fa fa-pencil"></i></a> 
+  <a href=""><i class="fa fa-map"></i></a> 
+  <a href=""><i class="fa fa-paste"></i></a> 
+  </div>  -->
+  <div class="content"> 
+<form method="post" action="/liuyan">
+  <input id="message" class="text-success" type="text"name="allcontent" placeholder="说两句..."> 
+  </input> 
+  <button type="submit" class="btn btn-success">留言</button> 
+  </form>
+  </div> 
+  </div> 
+<hr>
+{{range .Liuyan}}
+  <div id="information"> 
+
+{{.AllContent}}
+
+  </div> 
+{{end}}
+ </div>
+
+
+</div>
+     
+     </div>
+     
+
+		
+
+ {{template "../tpl/user/footer.tpl" .}}
