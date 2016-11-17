@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<title>你没没权限访问该页面</title>
+ <script src="/static/js/jquery.min.js"></script>
+ <script src="/static/js/layer-2.4/layer.js"></script>
+
+<script type="text/javascript">
+    
+window.onload=function (){
+     layer.alert("你没没权限访问该页面!",{icon: 4});
+    setTimeout(function(){
+  location.href="/login"; 
+},1500); 
+  }
+
+
+
+</script>
+    </head>
+
+</html>

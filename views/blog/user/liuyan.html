@@ -1,0 +1,44 @@
+{{template "../tpl/user/header.tpl" .}}
+
+    <div class="container">
+      <div class="blog-header">
+        <h1 class="blog-title">留言板</h1>
+        <p class="lead blog-description">说出你的想法，记录你的生活！</p>
+      </div>
+     </div> 
+
+
+ 
+     <div class="liuyanban"> 
+
+ <div id="usermessage">
+
+  <div class="content"> 
+<form method="post" action="/liuyan">
+  <input id="message" class="text-success" type="text"name="allcontent" placeholder="说两句..."> 
+  </input> 
+  <button type="submit" class="btn btn-success">留言</button> 
+  </form>
+  </div> 
+  </div> 
+<hr />
+ <h2>所有留言</h2>
+ <hr />
+{{range .Liuyan}}
+<h4>{{.AllContent}}</h4>
+<h6>发表于{{.Created}}</h6>
+<hr />
+{{end}}
+ </div>
+
+
+</div>
+     
+     </div>
+     
+</div>
+
+</div>
+		
+
+ {{template "../tpl/user/footer.tpl" .}}

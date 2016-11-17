@@ -1,0 +1,33 @@
+{{template "../tpl/admin/header.tpl" .}}
+
+<div class="container">
+<h1>文章列表</h1>
+    <a class="btn btn-default" ng-controller="addtopic" ng-click="alert()">添加文章</a>
+<table class="table table-striped" >
+  <thead>
+    <tr>
+    <th>ID</th>
+    <th>文章名称</th>
+    <th>最后更新</th>
+    <th>阅读数</th>
+    <th>操作</th>
+    </tr>
+  </thead>
+<!-- href="/admin/topic?action=del&id={{.Id}}" -->
+<!--href="/admin/topic/modify?tid={{.Id}}"-->
+  <tbody>
+  <input type="hidden" name="action"  />
+     {{range .AllTopics}}
+  <tr>
+   <td name="id" ng-model="formData.id">{{.Id}}</td>
+   <td>{{.Title}}</td>
+   <td>{{.Updated}} </td>
+   <td>{{.Views}}</td>
+   <td><a  href="/admin/topic/modify?tid={{.Id}}">编辑</a>&nbsp;|&nbsp;<a href="/admin/topic?action=del&id={{.Id}}">删除</a></td>
+   </tr>
+   {{end}}
+  </tbody>
+    
+</table>
+</div>
+{{template "../tpl/admin/footer.tpl"}}
