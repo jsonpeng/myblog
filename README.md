@@ -40,7 +40,7 @@ angular.js的`$http`包来实现前后台的数据对接,双向数据绑定实�
 
 ## 2.5 项目使用
 download后先打开`myblog`目录,双击myblog.exe启动程序,在浏览器中输入localhost:2020/login进入登录页面。  
-> 特别注意：启动前一定要安装配置好`mysql`，并且mysql中必须要创建对应的default数据库，不然程序执行将会失败!
+> 特别注意：启动前一定要安装配置好`mysql`，mysql必须设置账号为root,`密码`为123456,并且mysql中必须要创建对应的default数据库，不然程序执行将会失败!
 
 ## 3.0 写在后面  
 
