@@ -1,5 +1,11 @@
 # 基于**go**语言框架beego设计的博客系统
-
+>
+关键字:`beego` `orm` `golang`  
+在线演示:[点击进入](http://45.32.248.21:2020/)
+后台登录链接:http://45.32.248.21:2020/login  
+管理员账号:**admin**  
+管理员密码:**123456**  
+作者：**彭云** 
 ------
 ## 1.0 beego简介
 采用[beego](http://beego.me)以及[bootstrap](http://www.bootcss.com/)搭建:  
